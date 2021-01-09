@@ -1,0 +1,93 @@
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+
+<div class="row mt-5">
+    <div class="col-md-4 offset-4 mt-5">
+        <h5> Formularz używa pluginu jquery-validate do sprawdzania poprawnośći.</h5>
+        <form action="" method="post" class="mt-5">
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label>Imię</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="Imie"
+                           required>
+
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Nazwisko</label>
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Nazwisko"
+                           required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>e-mail</label>
+                    <div class="input-group">
+                        <input type="email" class="form-control" id="validationCustomUsername" placeholder="email"
+                               required>
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label>Miasto</label>
+                    <input type="text" class="form-control" placeholder="Miasto" required>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label>Kod Pocztowy</label>
+                    <input type="text" pattern="\d{2}-\d{3}" class="form-control" placeholder="XX-XXX" required>
+
+                </div>
+            </div>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked"
+                       required>
+                <label class="custom-control-label" for="customControlValidation2">Mężczyzna</label>
+            </div>
+            <div class="custom-control custom-radio mb-3">
+                <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked"
+                       required>
+                <label class="custom-control-label" for="customControlValidation3">Kobieta</label>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Zaakceptuj warunki
+                    </label>
+                </div>
+            </div>
+            <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+                <label class="custom-control-label" for="customControlValidation1">Zaznacz w celu potwierdzenia</label>
+
+
+
+            </div>
+
+
+            <div class="form-group">
+                <select class="custom-select browser-default" required>
+                    <option value="">Wykształcenie:</option>
+                    <option value="1">Podstawowe</option>
+                    <option value="2">Średnie</option>
+                    <option value="3">Wyższe</option>
+                </select>
+            </div>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                <label class="custom-file-label" for="validatedCustomFile">Prześlij swoje zdjęcie...</label>
+                <div class="invalid-feedback">Example invalid custom file feedback</div>
+            </div>
+            <input type="submit" id="btnSubmit"/>
+        </form>
+        <script>
+            jQuery("form").submit(function (e) {
+                e.preventDefault();
+                //or
+                //return false;
+            });
+        </script>
+
+    </div>
+</div>
+

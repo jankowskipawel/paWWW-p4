@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona projekt2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="mdb/js/jquery.js"></script>
+    <script src="mdb/js/mdb.js"></script>
+    <script src="mdb/js/popper.js"></script>
+
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="stylesheet" href="mdb/css/bootstrap.css">
+    <link rel="stylesheet" href="mdb/css/mdb.css">
+    <link rel="stylesheet" href="mdb/css/style.css">
+    <script>
+
+
+        $(function () {
+            $('.nav-link').click(function () {
+                var thisA = $(this);
+                $('#content').fadeOut(200, function () {
+                    $('#content').load(thisA.attr('href'), function () {
+                        $('#content').fadeIn(200);
+
+                    });
+                });
+                return false;
+            });
+
+        });
+
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script src="mdb/js/modules/forms-free.min.js"></script>
+    <script src="js/walidacja.js"></script>
+    <script src="js/rollover.js"></script>
+
+
+</head>
+<body>
+<main>
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark stylish-color fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="glowna.html">Strona Główna <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="galeria.html">Galeria <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="drugagaleria.html">Wiecej zdjęć <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tabela.html">Tabela wyjazdów</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="formularz.html">Zapisy do grupy</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col-md-12 mb-3  white-text text-center" id="content">
+            <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 mt-5 pt-md-5 pt-5 wow fadeInDown"
+                data-wow-delay="0.3s"><strong>Grupa podróżnicza</strong></h1>
+            <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+            <h5 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>Członkowie tej
+                grupy przeżyją wiele ekscytujących chwil i przygód.</strong></h5>
+            <div class="row mt-5">
+                <div class="col-md-4 mb-5 white-text text-center offset-4">
+                    <img src="img/zdj7.jpg" alt="zdjecie kobiety z balonami" data-alt-src="img/zdj8.jpg" alt="globus">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-md-center white-text">
+                    <h5>Najedź na obrazek (plugin rollover)</h5>
+                    <button type="button" class="btn peach-gradient white-text" data-toggle="tooltip" title="Zastosowanie pluginu tooltip :) ">Najedź na mnie !</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+    <div class="footer">
+        <footer class="page-footer font-small darken-3 stylish-color position-relative" id="footer">
+
+            <!-- Footer Elements -->
+            <div class="container">
+
+                <!-- Grid row-->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-12 py-1">
+                        <div class="mb-5 flex-center">
+
+                            <!-- Facebook -->
+                            <a class="fb-ic" href="http://facebook.com">
+                                <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!-- Twitter -->
+                            <a class="tw-ic" href="http://twitter.com">
+                                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!-- Google +-->
+                            <a class="gplus-ic" href="https://aboutme.google.com/">
+                                <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!--Linkedin -->
+                            <a class="li-ic" href="https://linkedin.com">
+                                <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!--Instagram-->
+                            <a class="ins-ic" href="http://instagram.com">
+                                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!--Pinterest-->
+                            <a class="pin-ic" href="http://pintrest.com">
+                                <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row-->
+
+            </div>
+            <!-- Footer Elements -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2019 Copyright: Pawel Jankowski 
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+    </div>
+    <!-- Footer -->
+
+</body>
+</html>
